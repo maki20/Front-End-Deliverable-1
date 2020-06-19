@@ -3,43 +3,58 @@
     color: #000;
 }
 
+body {
+  margin: 0px;
+}
 
 .header {
     background-color: #F2F2F2;
     width: 100%;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    justify-content: flex-end;
+    height: 200px;
+    flex-direction: column;
+    padding-left: 8px;
 }
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    text-align: center;
     color:#20a8b4;
-    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+    margin-bottom: 0px;
 }
 
 span {
     font-family: 'Roboto', sans-serif;
     color:#ff5c0f;
+    padding: 0px 0px 0px 8px;
 }
 
-div {
-    height: 36px;
+nav {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-nav ul {
+
+nav ul{
     list-style: none;
     display: flex;
-    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px; 
+    margin: 0px;
+}
+
+
+li {
+    margin: 5px 0px;
 }
 
 ul li a {
     text-decoration: none;
-    display: table-cell;
-    margin: 0;
-    margin-left: 1rem;
 }
   
 
@@ -53,11 +68,17 @@ button {
     padding: 12px;
     border: none;
     border-radius: 10px;
-
+    width: 100%;
 }
 
-main{
+button:hover {
+    background-color: #ff5c0f;
+    cursor: pointer;
+    
 }
+
+
+
 
 .box {
     height: 650px
@@ -67,31 +88,42 @@ main{
     float: left;
     text-align: left;
     vertical-align: middle;
-    margin: 200px 100px 0px 30px;
- }
+    margin: 50px 0px 0px 8px;
+    width: 100%; 
+}
+
 
 h3{
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-
+  font-size: 18px;
+  white-space: nowrap;
  }
 
-h4{
+main span {
+    padding: 0px;
+}
+
+h5{
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: 13px;
+  white-space: nowrap;
  }
 
 .box-img {
+    display: none;
     float: right;
     margin: 100px 70px 0px 0px;
  }
 
-button {
+.learn-more {
     background-color: #20a8b4; 
     color:white;
     padding: 12px;
     border: none;
     border-radius: 10px;
+    width: 100%;
+    margin-left: 8px;
+    margin-top: 0px;
  }
 
 button:hover {
@@ -100,3 +132,126 @@ button:hover {
     
  }
 
+@media only screen and (min-width: 768px){
+    /* For desktop View: */
+    *{
+        font-family: 'Roboto', sans-serif;
+        color: #000;
+    }
+    
+    .header {
+        background-color: #F2F2F2;
+        width: 100%;
+        height: 70px;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color:#20a8b4;
+        margin: 0px 0px 0px 4px;
+    }
+    
+    span {
+        font-family: 'Roboto', sans-serif;
+        color:#ff5c0f;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul{
+        list-style: none;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    ul li a {
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px 8px;
+    }
+      
+    
+    li a:hover {
+        color: #ff5c0f;
+    }
+    
+    button {
+        font-size: 1.25em;
+        background-color: #20a8b4; 
+        color:white;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        width: auto;
+        margin-left: 10px;
+    }  
+    
+    main {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .box {
+        height: 650px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+
+     }
+    
+    .box-text {
+        margin-top: 200px;
+        margin-left: 12px;
+     }
+    
+    h3{
+      font-family: 'Roboto', sans-serif;
+      font-size: 30px;
+    
+     }
+    
+    h5{
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      margin: 20px 0px; 
+     }
+
+    .box-text button {
+        background-color: #20a8b4; 
+        color:white;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        width: auto;
+        margin-left: 0px;
+    } 
+    
+    .box-img {
+        display: flex;
+        justify-content: flex-end;
+        margin: 100px 10px 0px 0px;
+     }
+    
+    
+
+ }
